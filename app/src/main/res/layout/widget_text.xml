@@ -13,7 +13,7 @@
             android:gravity="center"
             android:text="0"
             android:textColor="#ffffff"
-            android:textSize="20sp"
+            android:textSize="25sp"
             android:textStyle="bold|italic"
             android:contentDescription="@string/appwidget_text"
             android:background="#09C"
