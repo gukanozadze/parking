@@ -9,6 +9,14 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
+
+        <activity
+                android:name=".bookingActivity"
+                android:label="@string/title_activity_booking"
+                android:parentActivityName="MainActivity" >
+                android:theme="@style/AppTheme">
+        </activity>
+
         <receiver android:name=".widgetText">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>

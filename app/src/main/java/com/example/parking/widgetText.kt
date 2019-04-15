@@ -1,18 +1,12 @@
 package com.example.parking
 
-import android.app.AlarmManager
-import android.app.PendingIntent
 import android.appwidget.AppWidgetManager
 import android.appwidget.AppWidgetProvider
 import android.content.Context
-import android.content.Intent
 import android.util.Log
-import android.widget.CalendarView
 import android.widget.RemoteViews
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.MetadataChanges
-import kotlinx.android.synthetic.main.activity_main.*
-import java.util.*
 
 
 var firebaseNumber = ""

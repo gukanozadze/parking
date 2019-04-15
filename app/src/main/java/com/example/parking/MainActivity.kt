@@ -4,12 +4,15 @@ import android.appwidget.AppWidgetManager
 import android.content.ComponentName
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.widget.RemoteViews
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.MetadataChanges
 import kotlinx.android.synthetic.main.activity_main.*
 import android.content.Intent
+import android.view.Menu
+import android.view.MenuItem
+import org.jetbrains.anko.intentFor
+import org.jetbrains.anko.startActivity
+
 var number = ""
 var number_2 = ""
 
@@ -61,5 +64,22 @@ class MainActivity : AppCompatActivity() {
         intent.putExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS, ids)
         sendBroadcast(intent)
 
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+        when(item?.itemId){
+            R.id.menu_book -> {
+
+                startActivity<bookingActivity>()
+            }
+        }
+
+        return super.onOptionsItemSelected(item)
+    }
+
+    // Showing Menu on top
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.nav_menu, menu)
+        return super.onCreateOptionsMenu(menu)
     }
 }
